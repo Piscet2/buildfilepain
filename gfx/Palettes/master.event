@@ -1,0 +1,21 @@
+ALIGN 4
+processed_FE13_palettes:
+#include "processed_FE13_palettes.event"
+ALIGN 4
+processed_FE14_palettes:
+#include "processed_FE14_palettes.event"
+ALIGN 4
+processed_FE1_palettes:
+#include "processed_FE1_palettes.event"
+ALIGN 4
+processed_FE6_palettes:
+#include "processed_FE6_palettes.event"
+ALIGN 4
+processed_FE7_palettes:
+#include "processed_FE7_palettes.event"
+ALIGN 4
+processed_FE8_palettes:
+#include "processed_FE8_palettes.event"
+ALIGN 4
+processed_FE9_10_palettes:
+#include "processed_FE9_10_palettes.event"
