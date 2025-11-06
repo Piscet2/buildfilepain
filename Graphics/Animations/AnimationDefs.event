@@ -23,11 +23,23 @@
 #define SpecialAnim(Animation,Weapon) "BYTE Weapon 0x00 ; SHORT Animation"
 #define EndAnim "WORD 0x0"
 
+//animations
+#define RecruitSword 0xCA //#define just makes things easier
+#define EirikaAxe 0xCB
+#define EirikaHandAxe 0xCC
+
 ALIGN 4
 NewEirikaAnims:
-SwordAnim(0x3) //Using 1 for all swords
+	SwordAnim(RecruitSword) 
+	AxeAnim(EirikaAxe)
+	HandAxeAnim(EirikaHandAxe)
 EndAnim
 
-{
-#include "SwordInstaller.event"
-}
+//#define EffieLance 0x3B
+//#define EiriSwd 0x3A
+
+//ALIGN 4
+//Effie:
+	//LanceAnim(EffieLance) 
+	//SwordAnim(EiriSwd)
+//EndAnim

@@ -16,13 +16,14 @@ beq End
 
 @add SPEED damage
     mov   r0,r4     @Moving r0 to attacker data
-    add   r0,#0x5E  @Loading AS into r0      
+    add   r0,#0x16  @Loading AS into r0      
     ldrh  r2,[r0]   @Loading AS into r2
+	lsr   r2,r2,#1  @Halving AS
     mov   r1,r4     @Moving r1 to attacker data
-    add   r1,#0x5a  @Loading damage into r1
+    add   r1,#0x5C  @Loading damage(0x5a)/defense(0x5c) into r1
     ldrh  r3,[r1]   @Loading damage into r3
-    add   r3,r3,r2  @Adding Attack Speed to damage
-    strh  r3,[r1]   @Storing the new damage value into r1, which is in the same spot as damage
+    add   r3,r3,r2  @Adding changed Attack Speed to damage
+    strh  r3,[r1]   @Storing the new damage value into r1
 
 End:
 pop {r4-r7, r15}

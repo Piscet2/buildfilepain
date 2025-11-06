@@ -1,0 +1,4 @@
+ALIGN 4
+EirikaList:
+BYTE 1 ArmoredBlowID
+ALIGN 4

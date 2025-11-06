@@ -1,0 +1,184 @@
+#######################################################
+#01 lorm_sp1 Lord Lance
+#
+#When importing to FEditorAdv delete # and after each line.
+#######################################################
+/// - Mode 1               #Melee Animation
+C03                               #Start attack animation; need 07 right after this.
+C07                               #Start attack animation; need 03 right before this.
+1 p- Sword1.png
+2 p- Sword2.png
+3 p- Sword3.png
+C22
+1 p- Sword4.png
+1 p- Sword5.png
+1 p- Sword6.png
+1 p- Sword7.png
+1 p- Sword8.png
+1 p- Sword9.png
+1 p- Sword10.png
+1 p- Sword11.png
+1 p- Sword12.png
+1 p- Sword13.png
+1 p- Sword14.png
+1 p- Sword15.png
+1 p- Sword16.png
+1 p- Sword17.png
+1 p- Sword18.png
+1 p- Sword1.png
+C21                               #Play hit SFE (sounds like Knight Lord with sword's hit)
+C04                               #Prepare HP depletion routine; needed to animate return to standing frame after hit
+C1A                               #Normal hit
+C01                               #NOP
+C06                               #Begin opponent's turn after hit.next code 0D.
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 3               #Melee Critical Animation
+C03                               #Start attack animation; need 07 right after this.
+C07                               #Start attack animation; need 03 right before this.
+1 p- Sword1.png
+2 p- Sword2.png
+3 p- Sword3.png
+C22
+1 p- Sword4.png
+1 p- Sword5.png
+1 p- Sword6.png
+1 p- Sword7.png
+1 p- Sword8.png
+1 p- Sword9.png
+1 p- Sword10.png
+1 p- Sword11.png
+1 p- Sword12.png
+1 p- Sword13.png
+1 p- Sword14.png
+1 p- Sword15.png
+1 p- Sword16.png
+1 p- Sword17.png
+1 p- Sword18.png
+1 p- Sword1.png
+C21                               #Play hit SFE (sounds like Knight Lord with sword's hit)
+C04                               #Prepare HP depletion routine; needed to animate return to standing frame after hit
+C1A                               #Normal hit
+C01                               #NOP
+C06                               #Begin opponent's turn after hit.next code 0D.
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 5               #Ranged Animation 
+C03                               #Start attack animation; need 07 right after this.
+C07                               #Start attack animation; need 03 right before this.
+1 p- Sword1.png
+2 p- Sword2.png
+3 p- Sword3.png
+C22
+1 p- Sword4.png
+1 p- Sword5.png
+1 p- Sword6.png
+1 p- Sword7.png
+1 p- Sword8.png
+1 p- Sword9.png
+1 p- Sword10.png
+1 p- Sword11.png
+1 p- Sword12.png
+1 p- Sword13.png
+1 p- Sword14.png
+1 p- Sword15.png
+1 p- Sword16.png
+1 p- Sword17.png
+1 p- Sword18.png
+1 p- Sword1.png
+C21                               #Play hit SFE (sounds like Knight Lord with sword's hit)
+C04                               #Prepare HP depletion routine; needed to animate return to standing frame after hit
+C1A                               #Normal hit
+C01                               #NOP
+C06                               #Begin opponent's turn after hit.next code 0D.
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 6               #Ranged Critical Animation
+C03                               #Start attack animation; need 07 right after this.
+C07                               #Start attack animation; need 03 right before this.
+1 p- Sword1.png
+2 p- Sword2.png
+3 p- Sword3.png
+C22
+1 p- Sword4.png
+1 p- Sword5.png
+1 p- Sword6.png
+1 p- Sword7.png
+1 p- Sword8.png
+1 p- Sword9.png
+1 p- Sword10.png
+1 p- Sword11.png
+1 p- Sword12.png
+1 p- Sword13.png
+1 p- Sword14.png
+1 p- Sword15.png
+1 p- Sword16.png
+1 p- Sword17.png
+1 p- Sword18.png
+1 p- Sword1.png
+C21                               #Play hit SFE (sounds like Knight Lord with sword's hit)
+C04                               #Prepare HP depletion routine; needed to animate return to standing frame after hit
+C1A                               #Normal hit
+C01                               #NOP
+C06                               #Begin opponent's turn after hit.next code 0D.
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 7               #Dodge Melee Attack
+C02                               #Start of dodge
+1 p- Sword1.png
+C0E            
+1 p- Sword1.png                   
+C01                               #NOP
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 8               #Dodge Ranged Attack
+C02                               #Start of dodge
+1 p- Sword1.png
+C0E            
+1 p- Sword1.png                   
+C01                               #NOP
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - Mode 9               #Equiped with Melee Weapon
+1 p- Sword1.png
+C01                               #NOP
+~~~
+/// - Mode 10               #Standing motions
+1 p- Sword1.png
+C01                               #NOP
+~~~
+/// - Mode 11               #Equiped with Ranged weapon
+1 p- Sword1.png
+C01                               #NOP
+~~~
+/// - Mode 12               #Attack Missed Animation
+C03                               #Start attack animation; need 07 right after this.
+C07                               #Start attack animation; need 03 right before this.
+1 p- Sword1.png
+2 p- Sword2.png
+3 p- Sword3.png
+C22
+1 p- Sword4.png
+1 p- Sword5.png
+1 p- Sword6.png
+1 p- Sword7.png
+1 p- Sword8.png
+1 p- Sword9.png
+1 p- Sword10.png
+1 p- Sword11.png
+1 p- Sword12.png
+1 p- Sword13.png
+1 p- Sword14.png
+1 p- Sword15.png
+1 p- Sword16.png
+1 p- Sword17.png
+1 p- Sword18.png
+1 p- Sword1.png
+C21                               #Play hit SFE (sounds like Knight Lord with sword's hit)
+C04                               #Prepare HP depletion routine; needed to animate return to standing frame after hit
+C1A                               #Normal hit
+C01                               #NOP
+C06                               #Begin opponent's turn after hit.next code 0D.
+C0D                               #End of dodge animation. preceeded by 0x06
+~~~
+/// - End of animation

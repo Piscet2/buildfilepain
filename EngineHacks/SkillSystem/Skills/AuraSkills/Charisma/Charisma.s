@@ -1,37 +1,39 @@
+.equ CharismaID, AuraSkillCheck+4
 .thumb
-.equ CharismaID, SkillTester+4
+push {r4-r7,lr}
+@goes in the battle loop.
+@r0 is the attacker
+@r1 is the defender
+mov r4, r0
+mov r5, r1
 
-push {r4-r7, lr}
-mov r4, r0 @atkr
-mov r5, r1 @dfdr
-
-@hp not at full
-ldrb r0, [r4, #0x12] @max hp
-ldrb r1, [r4, #0x13] @curr hp
-
-@has Charisma
-ldr r0, SkillTester
+CheckSkill:
+@now check for the skill
+ldr r0, AuraSkillCheck
 mov lr, r0
-mov r0, r4 @attacker data
+mov r0, r4 @attacker
 ldr r1, CharismaID
+mov r2, #0 @can_trade
+mov r3, #3 @range
 .short 0xf800
 cmp r0, #0
 beq End
 
-@add SPEED damage
+@add Increase attack speed by 25%
     mov   r0,r4     @Moving r0 to attacker data
     add   r0,#0x5E  @Loading AS into r0      
     ldrh  r2,[r0]   @Loading AS into r2
-    mov   r1,r4     @Moving r1 to attacker data
-    add   r1,#0x5a  @Loading damage into r1
-    ldrh  r3,[r1]   @Loading damage into r3
-    add   r3,r3,r2  @Adding Attack Speed to damage
-    strh  r3,[r1]   @Storing the new damage value into r1, which is in the same spot as damage
+    add   r3,r2   @Loading bonus AS into r3
+	lsr   r3,r3,#2  @Dividing bonus AS by 4
+	add   r2,r2,r3  @Adding bonus AS
+	strh  r2,[r0]   @Storing boosted AS
 
 End:
-pop {r4-r7, r15}
+pop {r4-r7}
+pop {r0}
+bx r0
 .align
 .ltorg
-SkillTester:
+AuraSkillCheck:
 @Poin SkillTester
 @WORD CharismaID

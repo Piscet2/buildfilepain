@@ -1,0 +1,10 @@
+//#include your actual animation files here.
+{
+#include "Edelgard/AxeInstaller.event"
+}
+{
+#include "Edelgard/HandaxeInstaller.event"
+}
+{
+#include "Sword/SwordInstaller.event"
+}

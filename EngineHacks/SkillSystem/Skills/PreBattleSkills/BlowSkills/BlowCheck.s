@@ -103,28 +103,26 @@ add     r3,#0x1E    @Add 30 to the attacker's hit.
 strh    r3,[r0]     @Store attacker hit.
 b       SkillReturn
 ArmoredSkill:
-ldr     r0,=0x203A56C       @Move defender data into r1.
-mov r1, #0x4c    @Move to the defender's weapon ability
-ldr r1, [r0,r1]
-mov r2, #0x42
-tst r1, r2
-bne     SkillReturn @do nothing if magic bit set
-mov r2, #0x2
-lsl r2, #0x10 @0x20000 negate def/res
-tst r1, r2
-bne SkillReturn
-ldr r0, =0x203a4ec
-@ add     r0,#0x5A    @Move to the defender's damage.
-@ ldrh    r3,[r0]     @Load the defender's damage into r3.
-@ sub     r3,#10    @Subtract 20 from the defender's avoid.
-@ strh    r3,[r0]     @Store defender avoid.
+ldr     r0,=0x203A4EC       @Move attacker data into r0.
+add     r0,#0x5c  @Loading defense into r0
+ldrh    r2,[r0]   @Loading defense into r2
+add     r2,#1     @increasing defense by 1
+strh    r2,[r0]   @storing defense into defense
+lsr     r2,r2,#1  @Halving the defense bonus
+ldr     r1,=0x203A4EC     @Moving r1 to attacker data
+add     r1,#0x5a  @Loading damage into r1
+ldrh    r3,[r1]   @Loading damage into r3
+add     r3,r3,r2  @Adding defense to damage
+strh    r3,[r1]   @Storing the new damage value into r1, which is in the same spot as damage
+
+b       SkillReturn
 
 @testing
-add r0, #0x5c @attacker defense
-ldrh r3, [r0]
-add r3, #10
-strh r3, [r0]
-b SkillReturn
+@add r0, #0x5c @attacker defense
+@ldrh r3, [r0]
+@add r3, #10
+@strh r3, [r0]
+@b SkillReturn
 
 QuickDrawSkill:
 ldr     r0,=0x203A4EC       @Move attacker data into r0.

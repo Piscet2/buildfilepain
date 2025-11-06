@@ -132,8 +132,8 @@ Certain Blow: +40 Hit[N]
 when initiating battle.[X]
 
 ## SD_ArmoredBlow
-Armored Blow: +10 Def[N]
-when initiating battle.[X]
+Armored Blow: add defense to[N]
+damage when initiating battle.[X]
 
 ## SD_Vantage
 Vantage: If HP < 50%,[N]
@@ -613,8 +613,8 @@ Identity Problems: This unit can't[N]
 decide on a name or face.[X]
 
 ## SD_Charisma
-Charisma: Grants +10 Hit/Avoid[N]
-to all allies within three tiles.[X]
+Charisma: Increases defense by spd/2.[N]
+Allies within 3 spaces have 125% spd.[X]
 
 ## SD_HeroesDeathBlow
 Death Blow: +6 Attack[N]
@@ -804,8 +804,8 @@ Puissance: +3 Damage when the user's[N]
 Strength is higher than the enemy's.[X]
 
 ## SD_BattleVeteran
-Battle Veteran: Gain +1 damage and[N]
-+5% Hit per 10 levels unit has.[X]
+Unyielding: Increase damage[N]
+by 1/2 of defense.[X]
 
 ## SD_HolyAura
 Holy Aura: Gain +1 damage, +5% hit,[N]
@@ -843,8 +843,8 @@ of two or more enemies, gain +3[N]
 damage and +15% hit.[X]
 
 ## SD_Vanity
-Vanity: Gain +2 Damage and +10 Hit[N]
-when fighting enemy at 2 range.[X]
+Glacial: Increse atk and decrease[N]
+spd by res/2.[X]
 
 ## SD_MageSlayer
 Mage Slayer: Gain +2 damage and +10%[N]
@@ -1549,9 +1549,9 @@ Air Raid (Res): Grants +5 Res when[N]
 on a tile the enemy cannot enter.[X]
 
 ## SD_ChaosStyle
-Chaos Style: AS +3 during combat with[N]
-a physical weapon against a foe armed[N]
-with magic or vice versa.[X]
+Chaos Style: AS and damage +3 during[N]
+ combat with a physical weapon against a[N]
+ foe armed with magic or vice versa.[X]
 
 ## SD_Dragonskin
 Dragonskin: Halves damage taken.[X]

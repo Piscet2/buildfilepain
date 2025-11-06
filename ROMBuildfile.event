@@ -5,7 +5,9 @@
     ORG FreeSpace
 
     #include "repointedTextTable.event"
-	#include "Graphics/Animations/Animation Assembler/Master Animation Installer.event"
+	
+	//Graphics
+	#include "Graphics/MasterGraphicsInstaller.event"
 
     //Text first for Text ID definitions
     #include "Text/InstallTextData.event"
@@ -18,6 +20,9 @@
     //Engine Hacks
     #include "EngineHacks/_MasterHackInstaller.event"
     MESSAGE Used hax space ends at currentOffset
+	
+	//Events
+	//#include "Events/Event_Installer.event"
 	
 	ASSERT (FreeSpaceEnd - currentOffset) // So that you don't overwrite vanilla tables if using default freespace
 	

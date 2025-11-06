@@ -511,7 +511,7 @@
 #define AxeFaithID 165
 #define AxefaithID AxeFaithID //Alias
 
-//Battle Veteran: Gain +1 damage and +5% Hit per 10 levels unit has.
+//Battle Veteran/Unyielding: Deal additional damage equal to half of defense.
 //By Datagne
 #define BattleVeteranID 166
 

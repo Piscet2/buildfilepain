@@ -1,9 +1,9 @@
 INLINE PersonalSkillTable,Skill
 None,0x0
 Eirika,CharismaID
-Seth,SaviorID
+Seth,ArmoredBlowID
 Gilliam,RallyDefID
-Franz,SealStrID
+Franz,SealDefID
 Moulder,RallyResID
 Vanessa,SpurSpdID
 Ross,ParagonID
@@ -11,7 +11,7 @@ Neimi,RallyLukID
 Colm,RallySpdID
 Garcia,ColossusID
 Innes,BowRangeUpID
-Lute,ParagonID
+Lute,ChaosStyleID
 Natasha,SealLukID
 Cormag,RallyStrID
 Ephraim,InspirationID

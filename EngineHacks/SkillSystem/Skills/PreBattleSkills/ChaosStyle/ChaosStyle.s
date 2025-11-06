@@ -52,8 +52,12 @@ bne End @do nothing if magic bit set
 Effect:
 mov r0, r4
 add r0,#0x5E	@attacker AS
-ldrh r3,[r0]
-add r3,#3		@add 3 AS
+mov r1, r4
+add r1,#0x5a    @attacker damage
+ldrh r3,[r0]    @load AS into r3
+add r3,#5		@add 3 AS
+ldrh r2,[r1]    @load damage into r2
+add  r2,#5      @add 5 damage
 strh r3,[r0]
 
 End:
